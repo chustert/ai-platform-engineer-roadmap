@@ -13,4 +13,4 @@ To preview locally, open `index.html` in a browser, or run `python3 -m http.serv
 ## Notes
 
 - Fonts (Atkinson Hyperlegible Next and Mono) load from Google Fonts. Without a connection the pages fall back to system fonts.
-- Checklist ticks are stored in the visitor's browser (localStorage) and are never sent anywhere.
+- Checklist ticks are stored in the visitor's browser (localStorage) and are never sent anywhere. 
