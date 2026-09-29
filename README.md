@@ -1,16 +1,29 @@
 # AI Platform Engineer Roadmap
 
+A 12-month curriculum for engineers who build production AI systems with coding agents.
+
 Live site: https://chustert.github.io/ai-platform-engineer-roadmap/
 
-A static website: plain HTML, one stylesheet (`style.css`) and one small script (`site.js`). No build step and no dependencies.
+## What is in this repository
 
-## Hosting
+The site is plain HTML with one stylesheet, `style.css`, and one script, `site.js`. It has no build step and no dependencies. `index.html` is the home page. Every link is relative, so the site also works from a subfolder.
 
-Upload the contents of this folder to any static host (GitHub Pages, Netlify, Cloudflare Pages, Codeberg Pages, an S3 bucket, or any web server). `index.html` is the home page. All links are relative, so the site also works from a subfolder.
+## Preview the site locally
 
-To preview locally, open `index.html` in a browser, or run `python3 -m http.server` in this folder and visit http://localhost:8000.
+Open `index.html` in a browser. Or run a local web server in this folder and open http://localhost:8000:
 
-## Notes
+```sh
+python3 -m http.server
+```
 
-- Fonts (Atkinson Hyperlegible Next and Mono) load from Google Fonts. Without a connection the pages fall back to system fonts.
-- Checklist ticks are stored in the visitor's browser (localStorage) and are never sent anywhere.
+## Deploy the site
+
+The workflow in `.github/workflows/pages.yml` deploys the site to GitHub Pages. It runs on every push to `main`. To run it by hand, open the **Actions** tab, select **Deploy site to GitHub Pages**, and click **Run workflow**.
+
+To host the site somewhere else, upload the files in this folder to any static host.
+
+## Fonts and stored data
+
+The pages load Atkinson Hyperlegible Next and Atkinson Hyperlegible Mono from Google Fonts. Without a network connection, the browser uses system fonts instead.
+
+The checklists store ticks in the visitor's browser with `localStorage`. The site sends no data anywhere.

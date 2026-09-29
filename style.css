@@ -1,4 +1,4 @@
-/* Layout: plain project-site header, short hero on the home page; inner pages get a contents rail beside a 68ch reading column and a prev/next pager. */
+/* Layout: a plain site header and a short hero on the home page. Inner pages have a contents list on the left, a 68ch reading column, and previous and next links. */
 :root {
   --bg: #fafaf7;
   --surface: #f1f0ea;
@@ -86,6 +86,9 @@ article h1 { font-size: clamp(28px, 4vw, 38px); line-height: 1.15; letter-spacin
 article h2 { font-size: 20px; margin: 34px 0 8px; font-weight: 700; text-wrap: balance; }
 article p { margin: 0 0 14px; }
 article ul { margin: 0 0 16px; padding-left: 22px; }
+article ol { margin: 0 0 16px; padding-left: 24px; }
+article ol li::marker { font-family: var(--mono); font-size: 14px; color: var(--muted); }
+code { font-family: var(--mono); font-size: 0.88em; background: var(--surface); padding: 1px 4px; border-radius: 3px; }
 article li { margin-bottom: 6px; }
 strong { font-weight: 700; }
 

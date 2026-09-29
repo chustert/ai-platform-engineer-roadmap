@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Eight principles · AI Platform Engineer Roadmap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;500&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&display=swap"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="brand" href="index.html">ai-platform<b>/</b>roadmap</a><nav aria-label="Main"><a href="index.html">Home</a><a href="how-to-use.html" aria-current="page">Start</a><a href="phase-1.html">Phases</a><a href="plan.html">Plan</a><a href="tools.html">Tools</a><a href="final-checklist.html">Checklist</a></nav></div></header>
+<div class="wrap layout">
+  <nav class="toc" aria-label="Contents"><p class="toc-h">Start here</p><ol><li><a href="how-to-use.html">How to use this roadmap</a></li><li><a href="two-roles.html">Two kinds of role</a></li><li><a href="reading-code.html">Read code, write it rarely</a></li><li><a href="target-profile.html">Target profile</a></li><li><a href="principles.html" aria-current="page">Eight principles</a></li><li><a href="real-product.html">Work on a real product</a></li></ol><p class="toc-h">Phases</p><ol><li><a href="phase-1.html"><span class="tn">01</span>Direct coding agents and read their code</a></li><li><a href="phase-2.html"><span class="tn">02</span>Learn how models behave and what they cost</a></li><li><a href="phase-3.html"><span class="tn">03</span>Build retrieval that finds the right evidence</a></li><li><a href="phase-4.html"><span class="tn">04</span>Build tool servers with MCP</a></li><li><a href="phase-5.html"><span class="tn">05</span>Design agent workflows that survive failure</a></li><li><a href="phase-6.html"><span class="tn">06</span>Run agent workloads on AWS</a></li><li><a href="phase-7.html"><span class="tn">07</span>Trace every step an agent takes</a></li><li><a href="phase-8.html"><span class="tn">08</span>Build evals that catch regressions</a></li><li><a href="phase-9.html"><span class="tn">09</span>Run agents reliably in production</a></li><li><a href="phase-10.html"><span class="tn">10</span>Secure agents and the code they write</a></li><li><a href="phase-11.html"><span class="tn">11</span>Build an internal AI platform</a></li><li><a href="phase-12.html"><span class="tn">12</span>Get teams to adopt the platform</a></li><li><a href="phase-13.html"><span class="tn">13</span>Build Forge, the capstone platform</a></li><li><a href="elective-kubernetes.html">Elective: Kubernetes</a></li></ol><p class="toc-h">After the phases</p><ol><li><a href="staff-skills.html">Staff skills</a></li><li><a href="plan.html">12-month plan</a></li><li><a href="week.html">A typical week</a></li><li><a href="portfolio.html">Show your work</a></li><li><a href="tools.html">Tools to know</a></li><li><a href="skip.html">What to skip</a></li><li><a href="final-checklist.html">Final checklist</a></li></ol></nav>
+  <main>
+    <details class="toc-mobile"><summary>All pages</summary><p class="toc-h">Start here</p><ol><li><a href="how-to-use.html">How to use this roadmap</a></li><li><a href="two-roles.html">Two kinds of role</a></li><li><a href="reading-code.html">Read code, write it rarely</a></li><li><a href="target-profile.html">Target profile</a></li><li><a href="principles.html" aria-current="page">Eight principles</a></li><li><a href="real-product.html">Work on a real product</a></li></ol><p class="toc-h">Phases</p><ol><li><a href="phase-1.html"><span class="tn">01</span>Direct coding agents and read their code</a></li><li><a href="phase-2.html"><span class="tn">02</span>Learn how models behave and what they cost</a></li><li><a href="phase-3.html"><span class="tn">03</span>Build retrieval that finds the right evidence</a></li><li><a href="phase-4.html"><span class="tn">04</span>Build tool servers with MCP</a></li><li><a href="phase-5.html"><span class="tn">05</span>Design agent workflows that survive failure</a></li><li><a href="phase-6.html"><span class="tn">06</span>Run agent workloads on AWS</a></li><li><a href="phase-7.html"><span class="tn">07</span>Trace every step an agent takes</a></li><li><a href="phase-8.html"><span class="tn">08</span>Build evals that catch regressions</a></li><li><a href="phase-9.html"><span class="tn">09</span>Run agents reliably in production</a></li><li><a href="phase-10.html"><span class="tn">10</span>Secure agents and the code they write</a></li><li><a href="phase-11.html"><span class="tn">11</span>Build an internal AI platform</a></li><li><a href="phase-12.html"><span class="tn">12</span>Get teams to adopt the platform</a></li><li><a href="phase-13.html"><span class="tn">13</span>Build Forge, the capstone platform</a></li><li><a href="elective-kubernetes.html">Elective: Kubernetes</a></li></ol><p class="toc-h">After the phases</p><ol><li><a href="staff-skills.html">Staff skills</a></li><li><a href="plan.html">12-month plan</a></li><li><a href="week.html">A typical week</a></li><li><a href="portfolio.html">Show your work</a></li><li><a href="tools.html">Tools to know</a></li><li><a href="skip.html">What to skip</a></li><li><a href="final-checklist.html">Final checklist</a></li></ol></details>
+    <article>
+      <p class="eyebrow">Start here</p>
+      <h1>Eight principles behind the roadmap</h1>
+      <p>Every phase follows these eight principles.</p>
+      <h2>Put your effort into checking code, not producing it</h2>
+      <p>An agent can write a feature in minutes. The hard part is knowing whether the feature is correct, safe, and worth shipping. Spend more effort on tests, types, evals, traces, and review than on generating code.</p>
+      <h2>Own what you merge</h2>
+      <p>The person who merges a change is responsible for it, whoever wrote it. If you cannot explain why a change is safe, do not merge it.</p>
+      <h2>Learn the pattern before the tool</h2>
+      <p>Learn what a router, a durable workflow, a retry policy, and an eval loop are before you use a library that provides them. The same goes for agent tools. The terminal tool you use this quarter will change. The need to isolate and watch several agents will not.</p>
+      <h2>Put hard limits around the model</h2>
+      <p>Model output varies from run to run. Permissions, budgets, stored state, audit logs, and failure handling must not vary.</p>
+      <h2>Turn every production failure into a test</h2>
+      <p>Capture the failure as a trace, add a representative case to the eval set, fix the system, and let CI stop the failure from coming back.</p>
+      <h2>Limit what an agent can do</h2>
+      <p>A model, including your own coding agent, can take only the actions that the system around it allows. Autonomy is a permissions problem as much as an intelligence problem.</p>
+      <h2>Treat cost as part of reliability</h2>
+      <p>A workflow that succeeds but spends an unpredictable amount on tokens and tools is not ready for production.</p>
+      <h2>Make the safe choice the default</h2>
+      <p>Teams should not have to learn your platform to use it safely. Build it so that the default choice is also the safe one.</p>
+    </article>
+    <nav class="pager" aria-label="Previous and next page"><a class="prev" href="target-profile.html"><span>Previous</span>Target profile</a><a class="next" href="real-product.html"><span>Next</span>Work on a real product</a></nav>
+  </main>
+</div>
+<footer><div class="wrap"><p>Last reviewed in September 2026. Agent tools change every month, so check the tools page at every quarterly review.</p></div></footer><script src="site.js"></script>
+</body>
+</html>
