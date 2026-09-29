@@ -117,6 +117,14 @@ tbody tr:last-child th, tbody tr:last-child td { border-bottom: 0; }
 footer { border-top: 1px solid var(--rule); padding-block: 28px 40px; color: var(--muted); font-size: 14.5px; }
 footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 32px; justify-content: space-between; }
 footer p { margin: 0; max-width: 60ch; }
+.progress { margin: 28px 0 32px; padding: 18px 20px; border: 1px solid var(--rule); border-radius: 4px; }
+.progress h2 { margin: 0 0 6px; font-size: 18px; }
+.progress-count { font-family: var(--mono); font-size: 14px; font-variant-numeric: tabular-nums; margin: 0 0 8px !important; }
+.bar { height: 8px; background: var(--surface); border-radius: 4px; overflow: hidden; margin-bottom: 12px; }
+.bar span { display: block; height: 100%; width: 0; background: var(--accent); transition: width .2s; }
+@media (prefers-reduced-motion: reduce) { .bar span { transition: none; } }
+.progress-note { color: var(--muted); font-size: 15px; }
+.btn.confirm { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
 .linkbtn { background: none; border: 0; padding: 0; font: inherit; color: var(--fg); text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 3px; text-underline-offset: 3px; cursor: pointer; }
 
 @media (max-width: 860px) {

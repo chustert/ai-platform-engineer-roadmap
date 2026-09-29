@@ -14,9 +14,27 @@
     });
     count(list);
   });
-  var reset = document.getElementById('reset-ticks');
+  var TOTAL = 103;
+  function overall() {
+    var el = document.getElementById('all-done'); if (!el) return;
+    var n = Object.keys(state).length;
+    el.textContent = n;
+    var bar = document.getElementById('all-bar'); if (bar) bar.style.width = Math.min(100, n / TOTAL * 100) + '%';
+  }
+  document.querySelectorAll('.checks input').forEach(function (b) { b.addEventListener('change', overall); });
+  overall();
+  var reset = document.getElementById('reset-ticks'), armed = false, timer;
   if (reset) reset.addEventListener('click', function () {
+    if (!armed) {
+      armed = true; reset.textContent = 'Click again to clear every tick'; reset.classList.add('confirm');
+      timer = setTimeout(function () { armed = false; reset.textContent = 'Clear all ticks'; reset.classList.remove('confirm'); }, 4000);
+      return;
+    }
+    clearTimeout(timer); armed = false;
     state = {}; save();
     document.querySelectorAll('.checklist').forEach(function (list) { list.querySelectorAll('input').forEach(function (b) { b.checked = false; }); count(list); });
+    overall();
+    reset.textContent = 'Cleared'; reset.classList.remove('confirm');
+    setTimeout(function () { reset.textContent = 'Clear all ticks'; }, 2000);
   });
 })();
