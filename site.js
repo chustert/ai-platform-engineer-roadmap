@@ -14,7 +14,7 @@
     });
     count(list);
   });
-  var TOTAL = 103;
+  var TOTAL = 106;
   function overall() {
     var el = document.getElementById('all-done'); if (!el) return;
     var n = Object.keys(state).length;
