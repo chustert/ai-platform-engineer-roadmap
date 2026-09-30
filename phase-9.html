@@ -17,7 +17,7 @@
       <h1>Run agents reliably in production</h1>
       <aside class="note"><p class="note-title">Outcome</p><p>You run agents as distributed production workloads, with SLOs, limits on failure, planned fallbacks, and practised incident response.</p></aside>
       <h2>Define reliability in terms the user sees</h2>
-      <p>An agent can return HTTP 200 and still fail the task, so availability is not enough. Define service level indicators, or SLIs, for completed tasks, quality, latency, and cost. Examples are the rate of answers with valid citations, the rate of severe false positives, p95 latency, and the cost of each answer.</p>
+      <p>An agent can return HTTP 200 and still fail the task, so availability is not enough. Define service level indicators (SLIs) for completed tasks, quality, latency, and cost. A service level objective (SLO) is the target you set for an SLI, such as 95% of tasks completed. Examples are the rate of answers with valid citations, the rate of severe false positives, p95 latency, and the cost of each answer.</p>
       <h2>Plan for partial failure</h2>
       <p>Learn circuit breakers, retries with limits and random jitter, concurrency limits, load shedding, dead-letter queues, handling of jobs that keep failing, idempotency, and replay. Plan for partial failures explicitly. The model call succeeds but the tool fails. The tool succeeds but the response is lost. The worker dies after it creates a branch but before it records that the job finished.</p>
       <h2>Stop runaway runs</h2>
